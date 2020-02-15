@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16B3B60D23F7F17500061928 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3B60C23F7F17500061928 /* UIView+Ext.swift */; };
+		16B3B61023F7F1B700061928 /* BrushType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3B60F23F7F1B700061928 /* BrushType.swift */; };
+		16B3B61223F7F1CA00061928 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3B61123F7F1CA00061928 /* Line.swift */; };
 		16F3947523F7CD9C0076CB88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3947423F7CD9C0076CB88 /* AppDelegate.swift */; };
 		16F3947723F7CD9C0076CB88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3947623F7CD9C0076CB88 /* SceneDelegate.swift */; };
 		16F3947923F7CD9C0076CB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3947823F7CD9C0076CB88 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		15BAB6E6429725D6B4BF4A87 /* Pods_DrawTogether.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawTogether.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B3B60C23F7F17500061928 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		16B3B60F23F7F1B700061928 /* BrushType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushType.swift; sourceTree = "<group>"; };
+		16B3B61123F7F1CA00061928 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		16F3947123F7CD9C0076CB88 /* DrawTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F3947423F7CD9C0076CB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F3947623F7CD9C0076CB88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +48,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16B3B60B23F7F11200061928 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16F3947423F7CD9C0076CB88 /* AppDelegate.swift */,
+				16F3947623F7CD9C0076CB88 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16B3B60E23F7F17B00061928 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				16B3B60C23F7F17500061928 /* UIView+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		16B3B61323F7F1D500061928 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16B3B61123F7F1CA00061928 /* Line.swift */,
+				16B3B60F23F7F1B700061928 /* BrushType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		16F3946823F7CD9C0076CB88 = {
 			isa = PBXGroup;
 			children = (
@@ -63,10 +95,11 @@
 		16F3947323F7CD9C0076CB88 /* DrawTogether */ = {
 			isa = PBXGroup;
 			children = (
-				16F3947423F7CD9C0076CB88 /* AppDelegate.swift */,
-				16F3947623F7CD9C0076CB88 /* SceneDelegate.swift */,
+				16B3B61323F7F1D500061928 /* Model */,
 				16F3947823F7CD9C0076CB88 /* ViewController.swift */,
 				16F3947A23F7CD9C0076CB88 /* Main.storyboard */,
+				16B3B60E23F7F17B00061928 /* Extension */,
+				16B3B60B23F7F11200061928 /* Supporting Files */,
 				16F3947D23F7CD9E0076CB88 /* Assets.xcassets */,
 				16F3947F23F7CD9E0076CB88 /* LaunchScreen.storyboard */,
 				16F3948223F7CD9E0076CB88 /* Info.plist */,
@@ -88,7 +121,6 @@
 				769BDD9FE1405A6FABDB91A1 /* Pods-DrawTogether.debug.xcconfig */,
 				789EE0B19E3F4979277C6BBA /* Pods-DrawTogether.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,8 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B3B60D23F7F17500061928 /* UIView+Ext.swift in Sources */,
 				16F3947923F7CD9C0076CB88 /* ViewController.swift in Sources */,
 				16F3947523F7CD9C0076CB88 /* AppDelegate.swift in Sources */,
+				16B3B61223F7F1CA00061928 /* Line.swift in Sources */,
+				16B3B61023F7F1B700061928 /* BrushType.swift in Sources */,
 				16F3947723F7CD9C0076CB88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lacie.DrawTogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,7 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lacie.DrawTogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
