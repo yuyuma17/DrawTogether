@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SocketIO
 
 class CanvasView: UIView {
+    
+    fileprivate let socketWrapper = SocketWrapper.shared
     
     fileprivate var lines = [Line]()
     fileprivate var undoLines = [Line]()
@@ -84,6 +87,10 @@ class CanvasView: UIView {
         setNeedsDisplay()
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        socketWrapper.emit(lines: encodedLines())
+    }
+    
     func clearCanvas() {
         guard lines.count > 0 else {
             return
@@ -93,6 +100,7 @@ class CanvasView: UIView {
         paintingVC?.undoButton.isEnabled = false
         paintingVC?.redoButton.isEnabled = false
         paintingVC?.clearCanvasButton.isEnabled = false
+        socketWrapper.emit(lines: encodedLines())
         setNeedsDisplay()
     }
     
@@ -106,6 +114,7 @@ class CanvasView: UIView {
             paintingVC?.redoButton.isEnabled = true
         }
         undoLines.append(lines.removeLast())
+        socketWrapper.emit(lines: encodedLines())
         setNeedsDisplay()
     }
     
@@ -122,6 +131,7 @@ class CanvasView: UIView {
         }
         lines.append(undoLines.last!)
         undoLines.removeLast()
+        socketWrapper.emit(lines: encodedLines())
         setNeedsDisplay()
     }
     
@@ -164,5 +174,22 @@ class CanvasView: UIView {
         case .neon:
             shadowColor = color
         }
+    }
+    
+    func encodedLines() -> Data {
+        let encoder = JSONEncoder()
+        let encodedData = try! encoder.encode(lines)
+        return encodedData
+    }
+    
+    func decodedLines(dataFromSocket: Data) -> [Line] {
+        let decoder = JSONDecoder()
+        let decodedData = try! decoder.decode([Line].self, from: dataFromSocket)
+        return decodedData
+    }
+    
+    func receiveNewLinesFromSocket(newLines: Data) {
+        lines = decodedLines(dataFromSocket: newLines)
+        setNeedsDisplay()
     }
 }
