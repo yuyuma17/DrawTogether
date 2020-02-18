@@ -245,6 +245,12 @@
                                             <constraint firstAttribute="height" constant="90" id="iY2-Vt-TDf"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lng-iZ-h1S">
+                                        <rect key="frame" x="282.66666666666669" y="804.66666666666663" width="116.33333333333331" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -252,7 +258,9 @@
                                     <constraint firstAttribute="trailing" secondItem="My4-22-wvt" secondAttribute="trailing" id="2q5-bc-OCz"/>
                                     <constraint firstItem="My4-22-wvt" firstAttribute="top" secondItem="EDl-5C-hED" secondAttribute="bottom" id="3rC-KP-ERv"/>
                                     <constraint firstAttribute="trailing" secondItem="Zqa-ab-oGT" secondAttribute="trailing" id="ANd-8B-SiV"/>
+                                    <constraint firstItem="My4-22-wvt" firstAttribute="top" secondItem="Lng-iZ-h1S" secondAttribute="bottom" constant="10" id="AaD-KR-vLi"/>
                                     <constraint firstAttribute="trailing" secondItem="Wke-N8-7e0" secondAttribute="trailing" constant="10" id="Bao-sH-tQ3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lng-iZ-h1S" secondAttribute="trailing" constant="15" id="Bjg-8o-o9J"/>
                                     <constraint firstItem="Wxe-LY-H5g" firstAttribute="top" secondItem="gqZ-Gt-shU" secondAttribute="top" constant="20" id="FEt-A2-0ae"/>
                                     <constraint firstItem="Zqa-ab-oGT" firstAttribute="top" secondItem="ySO-fa-a1b" secondAttribute="bottom" constant="15" id="FpP-Fz-b2q"/>
                                     <constraint firstItem="c1A-9c-Zgv" firstAttribute="leading" secondItem="gqZ-Gt-shU" secondAttribute="leading" constant="25" id="Gps-Ms-QTe"/>
@@ -264,6 +272,7 @@
                                     <constraint firstItem="My4-22-wvt" firstAttribute="leading" secondItem="gqZ-Gt-shU" secondAttribute="leading" id="Zl1-dr-vrE"/>
                                     <constraint firstItem="c1A-9c-Zgv" firstAttribute="top" secondItem="My4-22-wvt" secondAttribute="bottom" constant="10" id="aHn-Or-SAQ"/>
                                     <constraint firstItem="Wke-N8-7e0" firstAttribute="leading" secondItem="gqZ-Gt-shU" secondAttribute="leading" constant="10" id="ed4-kX-MRS"/>
+                                    <constraint firstItem="Lng-iZ-h1S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gqZ-Gt-shU" secondAttribute="leading" constant="20" symbolic="YES" id="gZb-fv-5ZK"/>
                                     <constraint firstItem="ySO-fa-a1b" firstAttribute="top" secondItem="gqZ-Gt-shU" secondAttribute="top" constant="20" id="hgW-uL-5Mq"/>
                                     <constraint firstAttribute="trailing" secondItem="kyC-9T-EOG" secondAttribute="trailing" constant="10" id="hin-DE-wL6"/>
                                     <constraint firstItem="EDl-5C-hED" firstAttribute="top" secondItem="Zqa-ab-oGT" secondAttribute="bottom" id="icQ-2b-tsg"/>
@@ -291,6 +300,7 @@
                         <outlet property="canvas" destination="EDl-5C-hED" id="ylQ-mx-UeD"/>
                         <outlet property="clearCanvasButton" destination="mDj-3G-hXC" id="S2D-wo-E7E"/>
                         <outlet property="collectionView" destination="i5G-xZ-KYw" id="yif-cn-ycD"/>
+                        <outlet property="connectingLabel" destination="Lng-iZ-h1S" id="Goj-JO-fnh"/>
                         <outlet property="redoButton" destination="mOv-f5-pOh" id="L9V-QP-oXg"/>
                         <outlet property="selectBrushColorButton" destination="8Li-B8-cag" id="GXz-vv-VWc"/>
                         <outlet property="selectColorView" destination="Wke-N8-7e0" id="6rn-Vf-zFi"/>

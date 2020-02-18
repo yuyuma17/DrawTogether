@@ -11,7 +11,7 @@ import SocketIO
 
 class CanvasView: UIView {
     
-    fileprivate let socketWrapper = SocketWrapper.shared
+    fileprivate let socketHelper = SocketHelper.shared
     
     fileprivate var lines = [Line]()
     fileprivate var undoLines = [Line]()
@@ -88,7 +88,7 @@ class CanvasView: UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        socketWrapper.emit(lines: encodedLines())
+        socketHelper.emit(lines: encodedLines())
     }
     
     func clearCanvas() {
@@ -100,7 +100,7 @@ class CanvasView: UIView {
         paintingVC?.undoButton.isEnabled = false
         paintingVC?.redoButton.isEnabled = false
         paintingVC?.clearCanvasButton.isEnabled = false
-        socketWrapper.emit(lines: encodedLines())
+        socketHelper.emit(lines: encodedLines())
         setNeedsDisplay()
     }
     
@@ -114,7 +114,7 @@ class CanvasView: UIView {
             paintingVC?.redoButton.isEnabled = true
         }
         undoLines.append(lines.removeLast())
-        socketWrapper.emit(lines: encodedLines())
+        socketHelper.emit(lines: encodedLines())
         setNeedsDisplay()
     }
     
@@ -131,7 +131,7 @@ class CanvasView: UIView {
         }
         lines.append(undoLines.last!)
         undoLines.removeLast()
-        socketWrapper.emit(lines: encodedLines())
+        socketHelper.emit(lines: encodedLines())
         setNeedsDisplay()
     }
     

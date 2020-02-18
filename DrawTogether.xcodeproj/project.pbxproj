@@ -12,6 +12,7 @@
 		16B3B61223F7F1CA00061928 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3B61123F7F1CA00061928 /* Line.swift */; };
 		16B3B61523F7F28300061928 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3B61423F7F28300061928 /* CanvasView.swift */; };
 		16B3B61923F7F3AE00061928 /* ColorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3B61823F7F3AE00061928 /* ColorsCollectionViewCell.swift */; };
+		16B3B61B23F7F69B00061928 /* SocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3B61A23F7F69B00061928 /* SocketHelper.swift */; };
 		16F3947523F7CD9C0076CB88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3947423F7CD9C0076CB88 /* AppDelegate.swift */; };
 		16F3947723F7CD9C0076CB88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3947623F7CD9C0076CB88 /* SceneDelegate.swift */; };
 		16F3947923F7CD9C0076CB88 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3947823F7CD9C0076CB88 /* PaintingViewController.swift */; };
@@ -28,6 +29,7 @@
 		16B3B61123F7F1CA00061928 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		16B3B61423F7F28300061928 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		16B3B61823F7F3AE00061928 /* ColorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCollectionViewCell.swift; sourceTree = "<group>"; };
+		16B3B61A23F7F69B00061928 /* SocketHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketHelper.swift; sourceTree = "<group>"; };
 		16F3947123F7CD9C0076CB88 /* DrawTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F3947423F7CD9C0076CB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F3947623F7CD9C0076CB88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		16B3B61C23F7F69F00061928 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				16B3B61A23F7F69B00061928 /* SocketHelper.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		16F3946823F7CD9C0076CB88 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 				16B3B61323F7F1D500061928 /* Model */,
 				16B3B61623F7F28E00061928 /* View */,
 				16B3B61723F7F36800061928 /* Controller */,
+				16B3B61C23F7F69F00061928 /* Service */,
 				16B3B60E23F7F17B00061928 /* Extension */,
 				16B3B60B23F7F11200061928 /* Supporting Files */,
 				16F3947D23F7CD9E0076CB88 /* Assets.xcassets */,
@@ -268,6 +279,7 @@
 				16F3947523F7CD9C0076CB88 /* AppDelegate.swift in Sources */,
 				16B3B61223F7F1CA00061928 /* Line.swift in Sources */,
 				16B3B61023F7F1B700061928 /* BrushType.swift in Sources */,
+				16B3B61B23F7F69B00061928 /* SocketHelper.swift in Sources */,
 				16F3947723F7CD9C0076CB88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
