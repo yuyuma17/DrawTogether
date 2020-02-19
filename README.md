@@ -18,44 +18,44 @@ Function GIF Demo
 
 - **Normal Brush**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/normal.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/normal.gif?raw=true" width=55%/>
 
 - **Blur Brush**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/blur.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/blur.gif?raw=true" width=55%/>
 
 - **Neon Brush**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/neon.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/neon.gif?raw=true" width=55%/>
 
 - **Adjust Color**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/rcolor.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/rcolor.gif?raw=true" width=55%/>
 
 - **Adjust Width**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/rwidth.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/rwidth.gif?raw=true" width=55%/>
 
 - **Adjust Opacity**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/ropacity.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/ropacity.gif?raw=true" width=55%/>
 
 - **Undo**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/undo.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/undo.gif?raw=true" width=55%/>
 
 - **Redo**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/redo.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/redo.gif?raw=true" width=55%/>
 
 - **Clear**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/clear.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/clear.gif?raw=true" width=55%/>
 
 - **Save**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/save.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/save.gif?raw=true" width=55%/>
 
 - **Share**
 
-<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/share.gif?raw=true" width=65%/>
+<img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/share.gif?raw=true" width=55%/>
