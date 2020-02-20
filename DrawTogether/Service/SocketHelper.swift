@@ -27,8 +27,12 @@ final class SocketHelper {
         socket.on(event, callback: completion)
     }
     
-    func emit(lines: Data) {
+    func emitLines(lines: Data) {
         socket.emit("newDraw", lines)
+    }
+    
+    func emitUndoLines(undolines: Data) {
+        socket.emit("returnDraw", undolines)
     }
     
     func connectionStatus() -> String {
