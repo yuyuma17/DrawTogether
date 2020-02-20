@@ -36,7 +36,11 @@ class PaintingViewController: UIViewController {
         }
         socketHelper.listen("showToClients") { [weak self] (dataArray, ack) in
             guard let self = self else { return }
-            self.canvas.receiveNewLinesFromSocket(newLines: dataArray[0] as? Data ?? self.canvas.encodedLines())
+            self.canvas.receiveLinesFromSocket(linesFromSocket: dataArray[0] as! Data)
+        }
+        socketHelper.listen("returnToClient") { [weak self] (dataArray, ack) in
+            guard let self = self else { return }
+            self.canvas.receiveUndoLinesFromSocket(undoLinesFromSocket: dataArray[0] as! Data)
         }
         canvas.paintingVC = self
         undoButton.isEnabled = false
