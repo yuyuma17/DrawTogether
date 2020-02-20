@@ -59,3 +59,8 @@ Function GIF Demo
 - **Share**
 
 <img src="https://github.com/yuyuma17/DrawTogether/blob/master/Demo/share.gif?raw=true" width=55%/>
+
+To Do
+==========================
+
+1. Let every user have his own lines
