@@ -88,7 +88,8 @@ class CanvasView: UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        socketHelper.emit(lines: encodedLines())
+        socketHelper.emitLines(lines: encodedData(lines))
+        socketHelper.emitUndoLines(undolines: encodedData(undoLines))
     }
     
     func clearCanvas() {
@@ -100,7 +101,8 @@ class CanvasView: UIView {
         paintingVC?.undoButton.isEnabled = false
         paintingVC?.redoButton.isEnabled = false
         paintingVC?.clearCanvasButton.isEnabled = false
-        socketHelper.emit(lines: encodedLines())
+        socketHelper.emitLines(lines: encodedData(lines))
+        socketHelper.emitUndoLines(undolines: encodedData(undoLines))
         setNeedsDisplay()
     }
     
@@ -114,7 +116,8 @@ class CanvasView: UIView {
             paintingVC?.redoButton.isEnabled = true
         }
         undoLines.append(lines.removeLast())
-        socketHelper.emit(lines: encodedLines())
+        socketHelper.emitLines(lines: encodedData(lines))
+        socketHelper.emitUndoLines(undolines: encodedData(undoLines))
         setNeedsDisplay()
     }
     
@@ -131,7 +134,8 @@ class CanvasView: UIView {
         }
         lines.append(undoLines.last!)
         undoLines.removeLast()
-        socketHelper.emit(lines: encodedLines())
+        socketHelper.emitLines(lines: encodedData(lines))
+        socketHelper.emitUndoLines(undolines: encodedData(undoLines))
         setNeedsDisplay()
     }
     
@@ -176,20 +180,40 @@ class CanvasView: UIView {
         }
     }
     
-    func encodedLines() -> Data {
+    func encodedData(_ lineArray: [Line]) -> Data {
         let encoder = JSONEncoder()
-        let encodedData = try! encoder.encode(lines)
+        let encodedData = try! encoder.encode(lineArray)
         return encodedData
     }
     
-    func decodedLines(dataFromSocket: Data) -> [Line] {
+    func decodedData(data: Data) -> [Line] {
         let decoder = JSONDecoder()
-        let decodedData = try! decoder.decode([Line].self, from: dataFromSocket)
+        let decodedData = try! decoder.decode([Line].self, from: data)
         return decodedData
     }
     
-    func receiveNewLinesFromSocket(newLines: Data) {
-        lines = decodedLines(dataFromSocket: newLines)
+    func receiveLinesFromSocket(linesFromSocket: Data) {
+        lines = decodedData(data: linesFromSocket)
         setNeedsDisplay()
+        
+        // Lazy Version
+        if lines.count != 0 {
+            paintingVC?.undoButton.isEnabled = true
+            paintingVC?.clearCanvasButton.isEnabled = true
+        } else {
+            paintingVC?.undoButton.isEnabled = false
+            paintingVC?.clearCanvasButton.isEnabled = false
+        }
+    }
+    
+    func receiveUndoLinesFromSocket(undoLinesFromSocket: Data) {
+        undoLines = decodedData(data: undoLinesFromSocket)
+        
+        // Lazy Version
+        if undoLines.count == 0 {
+            paintingVC?.redoButton.isEnabled = false
+        } else {
+            paintingVC?.redoButton.isEnabled = true
+        }
     }
 }
