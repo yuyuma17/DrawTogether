@@ -11,7 +11,7 @@ Team Members：
 
 - **Backend**
 
-	<a href="https://github.com/1984-zen">Zen</a> is responsible for the <a href="https://github.com/Shiva1010/SheepChild">Socket Server</a>.（GCP、NodeJS）
+	<a href="https://github.com/1984-zen">Zen</a> is responsible for the <a href="https://github.com/1984-zen/socketio-whiteboard">Socket Server</a>.（GCP、NodeJS）
 
 Function GIF Demo
 ==========================
